@@ -18,6 +18,15 @@ english:
 	makeglossaries RE_for_beginners-en
 	latexmk -pdf RE_for_beginners-en.tex
 
+chinese:
+	rm -f *.fls
+	rm -f *.bbl
+	rm -f *.aux
+	latexmk -c
+	latexmk -pdf RE_for_beginners-cn.tex
+	makeglossaries RE_for_beginners-cn
+	latexmk -pdf RE_for_beginners-cn.tex
+
 russian-A5:
 	rm -f *.fls
 	rm -f *.bbl
@@ -35,3 +44,12 @@ english-A5:
 	latexmk -pdf RE_for_beginners-en-A5.tex
 	makeglossaries RE_for_beginners-en-A5
 	latexmk -pdf RE_for_beginners-en-A5.tex
+
+chinese-A5:
+	rm -f *.fls
+	rm -f *.bbl
+	rm -f *.aux
+	latexmk -c
+	latexmk -pdf RE_for_beginners-cn-A5.tex
+	makeglossaries RE_for_beginners-cn-A5
+	latexmk -pdf RE_for_beginners-cn-A5.tex
